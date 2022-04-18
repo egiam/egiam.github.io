@@ -8,13 +8,13 @@ const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
 // We obtain the current theme that the interface has by validating the dark theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme)?'dark':'light'
-const getCurrentIcon = () => document.body.classList.contains(iconTheme)?'uil-moon':'uil-sun'
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
 //We need to validate if the user has previously chosen a topic
-if(selectedTheme){
-    document.body.classList[selectedTheme === 'dark'?'add':'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'uil-moon'?'add':'remove'](iconTheme)
+if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activate/ deactivate the theme manually with the button
@@ -22,7 +22,7 @@ themeButton.addEventListener('click', () => {
     //ADD or remove the dark/light icon -- icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    //We save the theme and the current icon that the user has chosen
+        //We save the theme and the current icon that the user has chosen
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
@@ -35,29 +35,29 @@ const navClose = document.getElementById('nav-close')
 
 // ================  MENU SHOW  =============
 /*  Validate if the constant exists */
-if(navToggle){
+if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
-} 
+}
 
 // ================  MENU HIDE  =============
 /*  Validate if the constant exists */
-if(navClose){
+if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
-} 
+}
 
 
 
 console.log("MENU Y SETTING WORKING!")
-//===================================== REMOVE MENU PRORFILE =========================
+    //===================================== REMOVE MENU PRORFILE =========================
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
-    // when we click on nav__links, we remove the show menu
+        // when we click on nav__links, we remove the show menu
     navMenu.classList.remove('show-menu')
 }
 
@@ -69,10 +69,10 @@ console.log("Remove menu profile is working!")
 
 
 new Typewriter('#typewriter', {
-  strings: ['Ezequiel Giampaoli', 'Web-developer', 'Python | C# | Java', 'SQL Server | MongoDB', ''],
-  autoStart: true,
-  loop: true,
-  cursor: "|"
+    strings: ['Ezequiel Giampaoli', 'Web-developer', 'Python | C# | Java', 'SQL Server | MongoDB', ''],
+    autoStart: true,
+    loop: true,
+    cursor: "|"
 });
 console.log("Typewriter effect is working!")
 
@@ -82,31 +82,30 @@ var swiper = new Swiper(".blog-slider", {
     spaceBetween: 30,
     effect: 'fade',
     loop: true,
-    mousewheel:{
+    mousewheel: {
         invert: false,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".blog-slider__pagination",
-      clickable: true,
+        el: ".blog-slider__pagination",
+        clickable: true,
     },
     // mousewheel: true,
     keyboard: true,
-  });
+});
 console.log("Portfolio Swiper is working!")
 
 
 //===================================== SCROLL UP =========================
-function scrollUp(){
+function scrollUp() {
     const scrollup = document.getElementById('scroll-up');
     // When the scroll higher than 560 viewpoint /height , then the scroll up icon showld appear and on clicking should reach top of the page
-    if(this.scrollY >= 560) {
+    if (this.scrollY >= 560) {
         scrollup.classList.add('show-scroll');
-    }
-    else {
+    } else {
         scrollup.classList.remove('show-scroll')
     }
     console.log("Scroll up being called and working!")
@@ -125,9 +124,9 @@ function scrollActive() {
         const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
+        } else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
@@ -136,5 +135,3 @@ function scrollActive() {
     console.log("Section highlight working!")
 }
 window.addEventListener('scroll', scrollActive)
-
-
