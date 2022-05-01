@@ -167,12 +167,12 @@
 
                 <div class="about__info">
                     <div>
-                        <span class="about__info-title"> 04+ </span>
+                        <span class="about__info-title"> 05+ </span>
                         <span class="about__info-name"> Months <br> Experience </span>
                     </div>
 
                     <div>
-                        <span class="about__info-title"> 5+ </span>
+                        <span class="about__info-title"> 6+ </span>
                         <span class="about__info-name"> Completed <br> Projects </span>
                     </div>
 
@@ -1091,7 +1091,7 @@
                         <div class="blog-slider__content">
                             <span class="blog-slider__code"> February 2022</span>
                             <div class="blog-slider__title"> On Work </div>
-                            <div class="blog-slider__text"> Working on uploading pas projects and creating new ones.</div>
+                            <div class="blog-slider__text"> Working on uploading past projects and creating new ones.</div>
                             <a href="#https://youtu.be/E1X5Q3lgO30" target="_blank" class="button blog-slider__button button--flex"> 
                                 Demo
                                 <i class="uil uil-play button__icon"></i>
@@ -1108,7 +1108,7 @@
                         <div class="blog-slider__content">
                             <span class="blog-slider__code"> December 2021</span>
                             <div class="blog-slider__title"> On Work </div>
-                            <div class="blog-slider__text"> Working on uploading pas projects and creating new ones. </div>
+                            <div class="blog-slider__text"> Working on uploading past projects and creating new ones. </div>
                             <a href="#https://www.youtube.com/watch?v=Zr6VA7Gl0yQ" target="_blank" class="button blog-slider__button button--flex"> 
                                 Demo
                                 <i class="uil uil-play button__icon"></i>
@@ -1125,7 +1125,7 @@
                         <div class="blog-slider__content">
                             <span class="blog-slider__code"> October 2021</span>
                             <div class="blog-slider__title"> On Work </div>
-                            <div class="blog-slider__text"> Working on uploading pas projects and creating new ones.</div>
+                            <div class="blog-slider__text"> Working on uploading past projects and creating new ones.</div>
                             <a href="#https://youtu.be/a6PlEYCYJXw" target="_blank" class="button blog-slider__button button--flex"> 
                                 Demo
                                 <i class="uil uil-play button__icon"></i>
@@ -1142,7 +1142,7 @@
                         <div class="blog-slider__content">
                             <span class="blog-slider__code"> September 2021</span>
                             <div class="blog-slider__title"> On Work </div>
-                            <div class="blog-slider__text"> Working on uploading pas projects and creating new ones.</div>
+                            <div class="blog-slider__text"> Working on uploading past projects and creating new ones.</div>
                             <a href="#https://www.youtube.com/watch?v=9NarL9NsRr8" target="_blank" class="button blog-slider__button button--flex"> 
                                 Demo
                                 <i class="uil uil-play button__icon"></i>
@@ -1193,25 +1193,25 @@
 
                 <!-- FORM -->
                 <div class="col-lg-6 pl-lg-4 mt-lg-0 mt-6 contact-form" id="message-me">
-                    <h2 class="contact__title"> Interested to work together? - <span> Let's talk </span> (Doesn't work for now)</h2>
+                    <h2 class="contact__title"> Interested to work together? - <span> Let's talk </span></h2>
 
-                    <form action="#" method="POST" class="cf">
+                    <form action="mailto:ezegiampaoli@gmail.com" method="POST" class="cf" enctype="text/plain">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" name="message-name" class="form-control form__color mb-30 cf" placeholder="Your Name">
+                                <input type="text" name="message-name" class="form-control form__color mb-30 cf" placeholder="Your Name" id="fullName">
                             </div>
                             <div class="col-lg-6">
-                                <input type="email" name="message-email" class="form-control form__color mb-30 cf" placeholder="Your Email">
+                                <input type="email" name="message-email" class="form-control form__color mb-30 cf" placeholder="Your Email" id="email">
                             </div>
                             <div class="col-12">
-                                <input type="text" name="message-subject" class="form-control form__color mb-30 cf" placeholder="Subject">
+                                <input type="text" name="message-subject" class="form-control form__color mb-30 cf" placeholder="Subject" id="subject">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                <textarea name="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message" id="message"></textarea>
                             </div>
                             <div class="col-12">
 
-                                <button type="submit" class="button button--flex send-message form_button" disabled>
+                                <button type="submit" class="button button--flex send-message form_button" onclick="sendContact()">
                                     Send Message
                                     <i class="uil uil-message button__icon"></i>
                                 </button>
