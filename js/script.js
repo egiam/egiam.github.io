@@ -73,9 +73,10 @@ console.log("Remove menu profile is working!");
 new Typewriter("#typewriter", {
     strings: [
         "Ezequiel Giampaoli",
-        "Web-developer",
+        "Front-End Developer",
+        "Full-Stack Developer",
         "Python | C# | Java",
-        "SQL Server | MongoDB",
+        "SQL Server | MongoDB | MySQL",
         "",
     ],
     autoStart: true,
