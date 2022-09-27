@@ -170,6 +170,10 @@ img {
     height: auto;
 }
 
+b {
+    font-weight: bold;
+}
+
 
 /* ========================= REUSABLE CSS CLASSES =====================  */
 
