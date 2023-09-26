@@ -1586,3 +1586,7 @@ form textarea {
     min-width: 700px;
   }
 }
+
+strong {
+  font-weight: bold;
+}
